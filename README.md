@@ -1,13 +1,5 @@
 This tool returns a CSV file containing the username, first name, last name and title for each enumerated user.
 
-<b>Please note:</b>
-<ul>LinkedIn Terms of Service: "...we prohibit both the act of scraping others’ content from our services, and the development and support of tools to scrape LinkedIn services."</ul>
-<ul>There is currently a bug that includes the current user apart of the user list (first entry), easily deleted, cba to fix. :)</ul>
-<ul>You must use a LinkedIn account with a big enough network otherwise the search URL the script relies on will return unusable data.</ul>
-<ul>The script uses a SLEEPMIN (line 31) and SLEEPMAX (line 32) to randomize the sleeps between HTTP requests, you can edit this, however, it is probably safer to leave the sleeps there.</ul>
-
-Help screen:
-
 <pre>
 $ python LinkedInEnum.py
 Usage: python LinkedInEnum.py CompanyID NumberOfPages
@@ -52,5 +44,11 @@ You selected '3', proceed? [Y]es/No:
 [!] Enumerating page number 9 for users...
 [!] Enumerating page number 10 for users...
 [!] User enumeration complete!
-[!] 101 LinkedIn users were enumerated! Username, first name, last name and title was written to "/TW-Tools/Scripts/Repos/LinkedInEnum/1337_linkedin_users.csv"!
+[!] 101 LinkedIn users were enumerated! Username, first name, last name and title was written to "/home/leo/Tools/Scripts/Repos/LinkedInEnum/1337_linkedin_users.csv"!
 </pre>
+
+<b>Please note:</b>
+<ul>LinkedIn Terms of Service: "...we prohibit both the act of scraping others’ content from our services, and the development and support of tools to scrape LinkedIn services."</ul>
+<ul>There is currently a bug that includes the current user apart of the user list (first entry).</ul>
+<ul>You must use a LinkedIn account with a big enough network otherwise the search URL the script relies on will return unusable data.</ul>
+<ul>The script uses a SLEEPMIN (line 31) and SLEEPMAX (line 32) to randomize the sleeps between HTTP requests, you can edit this, however, it is probably safer to leave the sleeps there.</ul>
