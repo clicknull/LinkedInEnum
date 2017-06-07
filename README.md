@@ -1,4 +1,4 @@
-A very simple tool that accepts a LinkedIn "Company ID" and number of pages as positional arguments and LinkedIn credentials as interactive input. The tool returns a CSV file containing first name, last name and position for each enumerated user as well as a list of formatted usernames that can be used for password spraying, phishing, etc.
+A simple tool that accepts a LinkedIn "Company ID" and number of pages as positional arguments and LinkedIn credentials as interactive input. The tool returns a CSV file containing first name, last name and position for each enumerated user as well as a list of formatted usernames that can be used for password spraying, phishing, etc.
 
 <pre>
 $ python LinkedInUserEnum.py
