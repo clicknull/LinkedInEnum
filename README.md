@@ -52,5 +52,5 @@ You selected '3', proceed? [Y]es/No:
 [!] Enumerating page number 9 for users...
 [!] Enumerating page number 10 for users...
 [!] User enumeration complete!
-[!] 101 LinkedIn users were enumerated! First name, last name and title was written to "/TW-Tools/Scripts/Repos/LinkedInEnum/1337_linkedin_users.csv"!
+[!] 101 LinkedIn users were enumerated! Username, first name, last name and title was written to "/TW-Tools/Scripts/Repos/LinkedInEnum/1337_linkedin_users.csv"!
 </pre>
