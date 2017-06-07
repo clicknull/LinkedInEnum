@@ -18,10 +18,10 @@ $ python LinkedInEnum.py 1337 10
 ||L |||i |||n |||k |||e |||d |||I |||n |||E |||n |||u |||m ||
 ||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__||
 |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
-LinkedIn Username: leopold@rawbytesecurity.ca
+LinkedIn Username: username@domain.com
 LinkedIn Password:
 [!] Authenticating...
-[!] Authentication for "leopold@rawbytesecurity.ca" succeeded!
+[!] Authentication for "username@domain.com" succeeded!
 Username format options:
 		1. Joe Schmo -> JoeSchmo
 		2. Joe Schmo -> Joe.Schmo
