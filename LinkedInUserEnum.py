@@ -104,37 +104,6 @@ def enum_page(enumURL,cookieJar,pageNum):
 			if verbose: print Fore.RED + "[!]" + Style.RESET_ALL + " Skipping page number %d..." % pageNum 
 			return None
 	return response
-def enum_users(result):
-	"""
-	Accepts a JSON string and appends discovered LinkedIn users to the global 'users' variable.
-	"""
-	global users
-	title = temptitle = ''
-	if 'person' in result.keys() and 'firstName' in result['person'].keys() and 'lastName' in result['person'].keys():
-		firstName = result['person']['firstName']
-		lastName = result['person']['lastName']
-		snips = result['person']['snippets']
-		for snip in snips:
-			if 'fieldName' in snip.keys() and 'heading' in snip.keys() and snip['fieldName'] == 'Current':
-				title = temptitle = snip['heading']
-				title = title.replace('<B>','').replace('</B>', '').split(' at')[0]
-				break
-		company = ''
-		startBoldTagIndex = temptitle.find('<B>')
-		while startBoldTagIndex >= 0:
-			endBoldTagIndex   = temptitle[startBoldTagIndex:].find('</B>') + startBoldTagIndex
-			company += temptitle[startBoldTagIndex+len('<B>'):endBoldTagIndex]
-			temptitle = temptitle[endBoldTagIndex+len('</B>'):]
-			startBoldTagIndex = temptitle.find('<B>')
-			if startBoldTagIndex >= 0:
-				company += temptitle[:startBoldTagIndex]
-		if (firstName,lastName,title) not in users:
-			firstName = firstName.split()[0]
-			lastName  = lastName.split(',')[0]
-			firstName = encode_string(firstName)
-			lastName  = encode_string(lastName)
-			title     = encode_string(title)
-			users.append((firstName,lastName,title))
 def get_formatted_usernames(inputFileName, formatOption):
 	"""
 	Accepts a csv input file name (string) and format option (integer) and returns formatted usernames (list).
