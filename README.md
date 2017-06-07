@@ -1,37 +1,35 @@
-A simple tool that accepts a LinkedIn "Company ID" and number of pages as positional arguments and LinkedIn credentials as interactive input. The tool returns a CSV file containing first name, last name and position for each enumerated user as well as a list of formatted usernames that can be used for password spraying, phishing, etc.
+This tool returns a CSV file containing the username, first name, last name and title for each enumerated user.
+
+<b>Please note:</b>
+<ul>LinkedIn Terms of Service: "...we prohibit both the act of scraping others’ content from our services, and the development and support of tools to scrape LinkedIn services."</ul>
+<ul>There is currently a bug that includes the current user apart of the user list (first entry), easily deleted, cba to fix. :)</ul>
+<ul>You must use a LinkedIn account with a big enough network otherwise the search URL the script relies on will return unusable data.</ul>
+<ul>The script uses a SLEEPMIN (line 31) and SLEEPMAX (line 32) to randomize the sleeps between HTTP requests, you can edit this, however, it is probably safer to leave the sleeps there.</ul>
+
+Help screen:
 
 <pre>
-$ python LinkedInUserEnum.py
-Usage: python LinkedInUserEnum.py CompanyID NumberOfPages
-Example: python LinkedInUserEnum.py 1337 1000
+$ python LinkedInEnum.py
+Usage: python LinkedInEnum.py CompanyID NumberOfPages
+Example: python LinkedInEnum.py 1337 1000
 
 *Find CompanyID by visiting a company page and copy the 1337 in:
 	https://www.linkedin.com/company-beta/1337
 	https://www.linkedin.com/company/1337
 </pre>
 
-Enumerating 1000 LinkedIn search pages for Trustwave employees:
+Enumerating 10 LinkedIn search pages for LinkedIn employees:
 
 <pre>
-$ python LinkedInUserEnum.py 21523 1000
+$ python LinkedInEnum.py 1337 10
  ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____ ____
 ||L |||i |||n |||k |||e |||d |||I |||n |||E |||n |||u |||m ||
 ||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__|||__||
 |/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|/__\|
-LinkedIn Username: lvonniebelschuetz-godlewski@trustwave.com
+LinkedIn Username: leopold@rawbytesecurity.ca
 LinkedIn Password:
 [!] Authenticating...
-[!] Authentication for "lvonniebelschuetz-godlewski@trustwave.com" succeeded!
-[!] Enumerating page number 1 for users...
-[!] Enumerating page number 2 for users...
-[!] Enumerating page number 3 for users...
-<i>...TRUNCATED...</i>
-[!] Enumerating page number 99 for users...
-[!] Enumerating page number 100 for users...
-[!] Enumerating page number 101 for users...
-[!] No more matches found...
-[!] User enumeration complete!
-[!] 983 LinkedIn users were enumerated! First name, last name and title was written to "/TW-Tools/Scripts/Recon/21523_linkedin_users.csv"!
+[!] Authentication for "leopold@rawbytesecurity.ca" succeeded!
 Username format options:
 		1. Joe Schmo -> JoeSchmo
 		2. Joe Schmo -> Joe.Schmo
@@ -43,5 +41,16 @@ Username format options:
 		8. Joe Schmo -> Schmo.J
 Format Option: 3
 You selected '3', proceed? [Y]es/No:
-[!] 983 usernames written to "/TW-Tools/Scripts/Recon/21523_usernames.txt"!
+[!] Enumerating page number 1 for users...
+[!] Enumerating page number 2 for users...
+[!] Enumerating page number 3 for users...
+[!] Enumerating page number 4 for users...
+[!] Enumerating page number 5 for users...
+[!] Enumerating page number 6 for users...
+[!] Enumerating page number 7 for users...
+[!] Enumerating page number 8 for users...
+[!] Enumerating page number 9 for users...
+[!] Enumerating page number 10 for users...
+[!] User enumeration complete!
+[!] 101 LinkedIn users were enumerated! First name, last name and title was written to "/TW-Tools/Scripts/Repos/LinkedInEnum/1337_linkedin_users.csv"!
 </pre>
