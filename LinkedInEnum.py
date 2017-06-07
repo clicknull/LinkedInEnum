@@ -270,5 +270,5 @@ if __name__ == "__main__":
 		print Fore.RED + "[!]" + Style.RESET_ALL + " 0 LinkedIn users were enumerated..."
 		sys.exit(1)
 	else:
-		print Fore.GREEN + "[!]" + Style.RESET_ALL + " %d LinkedIn users were enumerated! First name, last name and title was written to \"%s\"!" % (len(finalUserList), os.path.join(os.getcwd(), outFileName))
+		print Fore.GREEN + "[!]" + Style.RESET_ALL + " %d LinkedIn users were enumerated! Username, first name, last name and title was written to \"%s\"!" % (len(finalUserList), os.path.join(os.getcwd(), outFileName))
 	outFile.close()
