@@ -10,7 +10,7 @@ Example: python LinkedInUserEnum.py 1337 1000
 	https://www.linkedin.com/company/1337
 </pre>
 
-Enumerating 1000 LinkedIn search pages for Trustwave employees.
+Enumerating 1000 LinkedIn search pages for Trustwave employees:
 
 <pre>
 $ python LinkedInUserEnum.py 21523 1000
